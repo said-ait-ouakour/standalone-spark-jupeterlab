@@ -6,6 +6,7 @@ volumes:
     
 services:
   jupyterlab:
+      build: .
       image: jupyterlabb
       container_name: jupyterlab
       ports:
