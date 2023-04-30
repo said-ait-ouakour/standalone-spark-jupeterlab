@@ -1,6 +1,6 @@
 # define base image 
-ARG debian_image_tag=8-jre-slim
-FROM openjdk:${debian_image_tag}
+ARG python_image_tag=3.7.10
+FROM python:${python_image_tag}
 
 # define spark version
 # define jupyter lab version
@@ -10,10 +10,13 @@ ARG jupyterlab_version=2.1.5
 
 
 # install python and pyspark && jupyterlab
-RUN apt-get update -y && \
-    apt-get install -y python3 && \
-    apt-get install -y python3-pip && \
-    pip3 install wget pyspark==${spark_version} jupyterlab==${jupyterlab_version}
+RUN pip install wget pyspark==${spark_version} jupyterlab==${jupyterlab_version}
+
+
+RUN apt install default-jre 
+
+
+RUN echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> /etc/environment
 
 # -- Runtime
 # expose the jupyterlab port 
