@@ -13,7 +13,8 @@ ARG jupyterlab_version=2.1.5
 RUN pip install wget pyspark==${spark_version} jupyterlab==${jupyterlab_version}
 
 
-RUN apt install default-jre 
+RUN apt update && apt upgrade && \
+    apt install default-jre 
 
 
 RUN echo "JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'" >> /etc/environment

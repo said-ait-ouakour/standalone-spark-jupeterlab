@@ -110,3 +110,17 @@ This repository contains an implementation of standalone spark cluster on docker
 
         - shared-workspace:/opt/workspace
 ```
+
+### Get Started :
+
+- Build Image
+
+```bash
+docker-compose build
+```
+
+* Run Container
+
+```bash
+docker-compose up
+```
