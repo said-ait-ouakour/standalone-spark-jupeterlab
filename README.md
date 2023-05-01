@@ -117,7 +117,7 @@ This repository contains an implementation of standalone spark cluster on docker
 docker-compose build
 ```
 
-* Run Container
+* Run Containers
 
 ```bash
 docker-compose up
