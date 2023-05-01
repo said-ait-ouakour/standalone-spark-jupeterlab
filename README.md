@@ -2,8 +2,6 @@
 
 This repository contains an implementation of standalone spark cluster on docker and jupeterlab using Big Data Europe images
 
-## Getting Started
-
 #### Prerequisites :
 
 * [ ] Docker Installed ( wsl2 & docker For windows )
