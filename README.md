@@ -18,7 +18,7 @@ This repository contains an implementation of standalone spark cluster on docker
 
    1. jupyterlab : `http://localhost:8888`
    2. spark-master UI: `http://localhost:8080`
-   3. spark-worker UI: `http://localhost`
+   3. spark-worker UI: `http://localhost:8081`
 
 ```yml
   
